@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student card FORM</title>
+</head>
+<body>
+  <h1>Student card FORM</h1>
+
+  <form>
+    <fieldset>
+      <legend>Personal Information</legend>
+      <p><b>Provide your details</b></p>
+
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name"><br><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter a password"><br><br>
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age"><br><br>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob"><br><br>
+
+      <p>Gender:</p>
+      <input type="radio" id="male" name="gender" value="male"> Male<br>
+      <input type="radio" id="female" name="gender" value="female"> Female<br>
+      <input type="radio" id="other" name="gender" value="other"> Other<br><br>
+
+      <p>Languages Known:</p>
+      <input type="checkbox" id="english" name="language" value="english"> English<br>
+      <input type="checkbox" id="spanish" name="language" value="spanish"> Spanish<br>
+      <input type="checkbox" id="french" name="language" value="french"> French<br><br>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option>Select your country</option>
+        <option>Ukraine</option>
+        <option>Poland</option>
+        <option>Germany</option>
+        <option>USA</option>
+      </select>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>College Subjects</legend>
+      <p><b>Select your subjects</b></p>
+      <label for="subjects">Choose subjects:</label><br>
+      <select id="subjects" name="subjects" size="4" multiple>
+        <option>Mathematics</option>
+        <option>Computer Science</option>
+        <option>Physics</option>
+        <option>Chemistry</option>
+      </select><br><br>
+
+      <label for="interest">Rate your interest in Computer Science:</label>
+      <input type="range" id="interest" name="interest" min="0" max="10" value="5">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Skills Assessment</legend>
+      <p><b>Assess your skills</b></p>
+
+      <label for="skills">Describe your skills:</label><br>
+      <textarea id="skills" name="skills" rows="4" cols="40" placeholder="List your skills here..."></textarea><br><br>
+
+      <label for="resume">Upload your resume:</label>
+      <input type="file" id="resume" name="resume"><br><br>
+
+      <label for="color">Pick your favorite color:</label>
+      <input type="color" id="color" name="color"><br><br>
+
+      <label for="time">Preferred study time:</label>
+      <input type="time" id="time" name="time"><br><br>
+
+      <input type="submit" value="Submit Survey">
+    </fieldset>
+  </form>
+
+  <p>© Student card by Serhii. All rights reserved.</p>
+</body>
+</html>
