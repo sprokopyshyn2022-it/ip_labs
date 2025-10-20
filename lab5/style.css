@@ -1,0 +1,64 @@
+  body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+
+  .hero-banner {
+    background-image: 
+      linear-gradient(rgba(20, 25, 70, 0.6), rgba(20, 25, 70, 0.6)),
+      url('https://lpnu.ua/sites/default/files/styles/hero/public/2025/10/6/news/33287/lptoplight.jpg?itok=2NWPRZIU');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    padding-top: 120px; 
+    text-shadow: 2px 2px 4px black; 
+  }
+  
+  .hero-banner a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .content-container {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .content-box {
+    display: inline-block;
+    width: 20%;
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 10px;
+    vertical-align: top; 
+  }
+
+  .content-box svg {
+    height: 35px;
+    width: 35px;
+    color: #003366;
+  }
+  
+  .content-box span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;
+  }
