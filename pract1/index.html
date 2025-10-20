@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практична робота №1 — Створення карти зображень та таблиць</title>
+</head>
+<body>
+  <h1>Практична робота №1 - Створення карти зображень та таблиць</h1>
+
+  <section class="image-click">
+      <h1>Завдання 1 | Створення карти</h1>
+
+        <img src="./img/v2.png" usemap="#webmap" alt="Web-технології" width="346" height="360">
+
+        <map name="webmap">
+            <area shape="poly" coords="170,10,220,80,170,150,120,80"
+                href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+                alt="CSS" title="Курс CSS">
+            <area shape="poly" coords="220,80,300,110,270,190,170,150"
+                href="https://developer.mozilla.org/en-US/docs/Web/HTTP"
+                alt="HTTP" title="Курс HTTP">
+            <area shape="poly" coords="170,150,270,190,230,270,170,300,110,270"
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                alt="HTML" title="Курс HTML">
+            <area shape="poly" coords="110,270,60,200,70,130,120,80,170,150"
+                href="https://developer.mozilla.org/en-US/docs/Web/API"
+                alt="Web APIs" title="Курс Web API">
+            <area shape="poly" coords="170,150,230,270,110,270"
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                alt="JavaScript" title="Курс JavaScript">
+        </map>
+
+        <p>Натисни на будь-яку частину п’ятикутника, щоб перейти до курсу відповідної веб-технології.</p>
+    </section>
+    
+<hr>
+
+    <section class="table">
+
+     <h1>Завдання 2 | Створення таблиць</h1>
+
+        <table border="1" cellpadding="5" style="text-align:center;">
+            <tr>
+            <td colspan="2">Клітинка 1</td>
+            <td rowspan="2">Клітинка 2</td>
+            </tr>
+            
+            <tr>
+            <td>Клітинка 3</td>
+            <td>Клітинка 4</td>
+            </tr>
+            
+            <tr>
+            <td>Клітинка 5</td>
+            <td rowspan="2">Клітинка 6</td>
+            <td rowspan="2">Клітинка 7</td>
+            </tr>
+            
+            <tr>
+            <td>Клітинка 8</td>
+            </tr>
+        </table>
+    </section>
+
+</body>
+</html>
