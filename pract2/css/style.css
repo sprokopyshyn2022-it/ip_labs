@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+  
+.header {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.header__top-bar {
+    background: #f8f8f8;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.header__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo-image {
+    height: 80px;
+}
+
+.header__top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__languages {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.header__lang-item--active {
+    font-weight: bold;
+    color: #003366;
+}
+
+.header__search {
+    display: flex;
+}
+
+.header__search-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+}
+
+.header__search-button {
+    background: #003366;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.header__main-nav {
+    padding: 15px 0;
+}
+
+.header__menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header__menu-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.header__menu-item a:hover {
+    color: #003366;
+}
+
+.header__menu-item--dropdown a::after {
+    content: " ▼";
+    font-size: 12px;
+}
+
+.hero-banner {
+    background-image: 
+      linear-gradient(rgba(20, 25, 70, 0.6), rgba(20, 25, 70, 0.6)),
+      url('https://lpnu.ua/sites/default/files/styles/hero/public/2025/10/6/news/33287/lptoplight.jpg?itok=2NWPRZIU');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-banner h1 {
+    font-size: 48px;
+    font-weight: bold;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    padding-top: 120px; 
+    text-shadow: 2px 2px 4px black; 
+  }
+  
+  .hero-banner a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .content-container {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .content-box {
+    display: inline-block;
+    width: 20%;
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    margin: 10px;
+    vertical-align: top; 
+  }
+
+  .content-box svg {
+    height: 35px;
+    width: 35px;
+    color: #003366;
+  }
+  
+  .content-box span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;
+  }
+
+.news {
+    padding: 40px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.news__container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.news__title {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.news__title::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #003366;
+    margin: 10px auto 0;
+}
+
+.news__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.news__item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.news__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.news__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news__date {
+    display: block;
+    padding: 10px;
+    font-size: 14px;
+    color: #666;
+    background: #eee;
+}
+
+.news__item {
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease; 
+}
+
+.news__item:hover {
+    background: #f0f0f0;           
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15); 
+}
+
+.footer {
+    background: #f8f8f8;
+    padding: 40px 20px 20px;
+    font-size: 14px;
+    color: #333;
+    border-top: 1px solid #eee;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer__column-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.footer__list-item {
+    margin-bottom: 8px;
+}
+
+.footer__site-info {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer__certificates {
+    margin-bottom: 20px;
+}
+
+.footer__cert-image {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.footer__partners {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer__partner-logo {
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer__social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer__social-link {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: #003366;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.footer__social-link:hover {
+    background: #005599;
+    transition: background 0.5s ease;
+}
