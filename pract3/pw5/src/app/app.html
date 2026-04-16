@@ -1,0 +1,62 @@
+<div class="app-container">
+    <header class="app-header">
+        <h1 class="app-header__title">Менеджер завдань - Студент #{{ USER_ID }}</h1>
+    </header>
+
+    <section class="todo-form">
+        <form (ngSubmit)="onSubmit()">
+            <div class="todo-form__group">
+                <input type="text" name="title" [(ngModel)]="formData.title" class="todo-form__input" placeholder="Назва задачі" required autocomplete="off">
+            </div>
+            <div class="todo-form__group">
+                <textarea name="description" [(ngModel)]="formData.description" class="todo-form__textarea" placeholder="Детальний опис задачі" rows="2"></textarea>
+            </div>
+            <div class="todo-form__row">
+                <select name="tag" [(ngModel)]="formData.tag" class="todo-form__select">
+                    <option value="Робота">Робота</option>
+                    <option value="Навчання">Навчання</option>
+                    <option value="Особисте">Особисте</option>
+                </select>
+                <input type="date" name="deadline" [(ngModel)]="formData.deadline" class="todo-form__input">
+            </div>
+            <div class="todo-form__actions">
+                <button type="button" class="btn btn--secondary" (click)="resetForm()">
+                    Очистити
+                </button>
+                <button type="submit" class="btn" [class.btn--edit]="isEditing" [class.btn--primary]="!isEditing">
+                    <span>{{ isEditing ? 'Зберегти зміни' : 'Додати задачу' }}</span>
+                </button>
+            </div>
+        </form>
+    </section>
+
+    @if (isLoading) {
+        <div style="text-align: center; margin-bottom: 20px; color: #6b7280; font-weight: 500;">
+            ⏳ Завантаження даних з сервера...
+        </div>
+    }
+
+    <section class="task-list">
+        @for (task of todos; track task.id) {
+            <div class="task-card" [class.task-card--done]="task.isDone">
+                <div class="task-card__content">
+                    <div class="task-card__header">
+                        <span class="task-card__title">{{ task.title }}</span>
+                        <span class="task-card__tag">{{ task.tag }}</span>
+                    </div>
+                    <p class="task-card__desc">{{ task.description }}</p>
+                    <div class="task-card__meta">
+                        👤 Студент ID: <strong>{{ task.userId }}</strong><br>
+                        📅 Дедлайн: <span>{{ task.deadline || 'Без дати' }}</span> <br>
+                        <span class="task-card__status">{{ task.isDone ? '✔ Виконано' : 'Статус: В роботі' }}</span>
+                    </div>
+                </div>
+                <div class="task-card__actions">
+                    <button class="btn btn--success" (click)="toggleDone(task)" title="Виконано">✔</button>
+                    <button class="btn btn--edit" (click)="editTask(task)" title="Редагувати">✎</button>
+                    <button class="btn btn--danger" (click)="deleteTask(task.id)" title="Видалити">✖</button>
+                </div>
+            </div>
+        }
+    </section>
+</div>
